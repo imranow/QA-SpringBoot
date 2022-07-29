@@ -1,0 +1,11 @@
+package com.example;
+
+@Configuration
+public class AppConfig {
+
+    @Bean
+    public ModelMapper mapper()
+        return new ModelMapper();
+    }
+
+}

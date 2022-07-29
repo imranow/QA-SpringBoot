@@ -1,0 +1,21 @@
+package com.example.laptops;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+import com.example.interfaces.HDD;
+import com.example.interfaces.Laptop;
+
+//@Component("mySony")
+public abstract class Sony implements Laptop{
+	@Autowired
+	@Qualifier("ToshibaStorage")
+	HDD stor;
+	
+	public String storage() {
+		return "this is the Sony laptop with HDD storage called "+stor.storage();
+	
+}
+
+}

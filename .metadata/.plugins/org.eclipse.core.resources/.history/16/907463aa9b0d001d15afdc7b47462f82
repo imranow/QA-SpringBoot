@@ -1,0 +1,33 @@
+package com.example.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.example.model.Product;
+
+@Service
+public class ProductService {
+	public List <Product> list=new ArrayList();
+	
+	public Product addProd(Product prod) {
+		this.list.add(prod);
+		return this.list.get(list.size()-1);
+		
+	}
+	public List<Product> readProd() {
+		return this.list;
+	}
+	public Product updateProd(int id, Product prod) {
+		this.list.remove(id);//remove prod with that id
+		this.list.add(id,prod);
+		return this.list.get(id);
+		
+	}
+	public void deleteProd(int id) {
+		this.list.remove(id);
+		
+	}
+
+}

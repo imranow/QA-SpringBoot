@@ -1,0 +1,45 @@
+package com.example.service;
+
+import java.util.List;
+import java.util.Optional;
+
+
+import com.example.persistence.domain.Band;
+import com.example.persistence.repo.BandRepository;
+
+public class BandService {
+	private BandRepository repo;
+
+	public BandService(BandRepository repo) {
+		super();
+		this.repo = repo;
+	}
+	public Band addBand(Band bnd){
+		return this.repo.save(bnd);
+	}
+	public List<Band> readAccount() {
+		return this.repo.findAll();
+	
+	}
+	public Band updateBand(int id, Band bnd){
+		Optional<BAND> myTempAccount = this.repo.findById(id);
+		Account existing=myTempAccount.get();		
+		existing.setAccountNumber(acc.getAccountNumber());
+		existing.setName(acc.getName());
+		return this.repo.save(existing);
+	}
+	public boolean deleteAccount(int id) {
+		this.repo.deleteById(id);
+		boolean exists=this.repo.existsById(id);
+		return !exists;
+	}
+	
+	public List<Account> getProductByAccount(String AccountName){
+		return this.repo.findAccountByAccountName(AccountName);
+	}
+	public List<Account> getAccountByName(String name){
+		return this.repo.findAccountByName(name);
+	}
+	
+
+}

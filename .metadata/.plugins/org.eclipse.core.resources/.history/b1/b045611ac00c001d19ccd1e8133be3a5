@@ -1,0 +1,8 @@
+package com.example.interfaces;
+
+public interface HardDisk {
+	public static void storage(){
+		
+	}
+
+}
