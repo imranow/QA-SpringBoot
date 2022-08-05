@@ -37,22 +37,15 @@ public class MainController {
 	
 	}
 	@PutMapping("/update/{id}")
-	public Product update (@PathVariable int id,@RequestBody Product prod) {
-	
+	public Product update(@PathVariable int id,@RequestBody Product prod) {
+		
 		return this.service.updateProduct(id, prod);
 	}
 	@DeleteMapping("/delete/{id}")
 	public void delete (@PathVariable int id) {
 		this.service.deleteProduct(id);
 	}
-	/*@GetMapping("/read/{brand}")
-	public List<Product> read(@PathVariable String brand){
-		return this.service.getProductByBrand(brand);
-	}
-	@GetMapping("/read/{name}")
-	public List<Product> readName(@PathVariable String name){
-		return this.service.getProductByName(name);
-	}*/
+
 	@GetMapping("/home")
 	public String home() {
 		return "My home";

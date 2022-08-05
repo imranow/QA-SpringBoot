@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=C\:\\Users\\tanbi\\QA\\Spring-Prepop\\.git;
-GitRepositoriesView.GitDirectories.relative=C\:\\Users\\tanbi\\QA\\Spring-Prepop\\.git;
+GitRepositoriesView.GitDirectories=C\:\\Users\\tanbi\\QA\\Spring-Prepop\\.git;C\:\\Users\\tanbi\\QA\\.metadata\\.git;
+GitRepositoriesView.GitDirectories.relative=C\:\\Users\\tanbi\\QA\\Spring-Prepop\\.git;.git;
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1

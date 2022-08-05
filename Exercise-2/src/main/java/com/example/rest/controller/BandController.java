@@ -19,7 +19,7 @@ public class BandController {
 		super();
 		this.service = service;
 	}
-	@PostMapping("/create")
+	@PostMapping("/createband")
 	public Band create(@RequestBody Band bnd){ 
 	
 		return this.service.addBand(bnd);

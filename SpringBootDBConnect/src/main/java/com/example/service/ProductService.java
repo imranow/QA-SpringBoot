@@ -40,11 +40,5 @@ public class ProductService {
 		return !exists;
 	}
 	
-	/*public List<Product> getProductByBrand(String brand){
-		return this.repo.findProductByBrand(brand);
-	}
-	public List<Product> getProductByName(String name){
-		return this.repo.findProductByName(name);
-	}*/
 
 }

@@ -13,9 +13,4 @@ import com.example.model.Product;
 @EnableJpaRepositories
 public interface ProductRepo extends JpaRepository<Product,Integer> {
 
-	/*@Query(value="select * from product where brand=?1", nativeQuery=true)
-	List<Product>findProductByBrand(String brand);
-	
-	//@Query("SELECT p from Person p WHERE p.name = ?1")
-    List<Product> findProductByName(String name);*/
 }
